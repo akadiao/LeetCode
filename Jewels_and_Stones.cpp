@@ -7,6 +7,8 @@ class Solution {
 public:
     int numJewelsInStones(string J, string S) {
         int numJinS = 0;
+	if(J.empty() || S.empty())
+		return 0;
         for(int i=0; i<S.length(); i++)
             for(int j=0; j<J.length(); j++)
                 if(J[j]==S[i])
